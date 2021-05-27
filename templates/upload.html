@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}                                                                                                                           
+{% block content %}
+<p style="background-color: #edf2f4;">
+  <h2>Upload</h2>
+  <form action="save_details/" enctype="multipart/form-data" method="POST">
+      <!--<div id="my-dropzone" class="dropzone dz">
+        {% csrf_token %}
+        <div class="fallback">
+          <input name="file" type="file" multiple />
+        </div>
+      </div>-->
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      <div class="row">
+        <div class="col-4">
+          {{form.name.errors}}
+          {{ form.name | as_crispy_field }}
+        </div>
+        <div class="col-4">
+          {{form.middlename.errors}}
+          {{ form.middlename | as_crispy_field }}
+        </div>
+        <div class="col-4">
+          {{form.surname.errors}}
+          {{ form.surname | as_crispy_field }}
+        </div>
+      </div>
+      {{form.dob.errors}}
+      {{ form.dob | as_crispy_field }}
+      {{form.image.errors}}
+      {{ form.image | as_crispy_field }}
+      {{form.image1.errors}}
+      {{ form.image1 | as_crispy_field }}
+      <div class="text-center">
+        <input type="submit" id="submit" value="Submit" class="btn btn-primary">
+      </div>
+  </form>
+</p>
+{% endblock %}
+

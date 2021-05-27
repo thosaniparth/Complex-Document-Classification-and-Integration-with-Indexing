@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}                                                                                                                           
+{% block content %}
+    <div>{{name}}</div>
+    <div>{{middlename}}</div>
+    <div>{{surname}}</div>
+    <div>{{dob}}</div>
+
+    <div>{{dictValuesforAadharforFirst}}</div>
+    <!-- <div>{{dictValuesforPANforFirst}}</div> -->
+
+    <!-- <div>{{dictValuesforAadharforSecond}}</div> -->
+    <div>{{dictValuesforPANforSecond}}</div>
+    <form action="merged_docs/" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+
+    <div class="text-center">
+        <input type="submit" id="submit" value="View merged docs" class="btn btn-primary">
+      </div>
+      </form>
+
+{% endblock %}

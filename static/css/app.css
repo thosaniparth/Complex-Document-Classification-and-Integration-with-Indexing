@@ -1,0 +1,22 @@
+body {
+  background-color: #75e6da ;
+}
+.navbar {
+  background-color: #05445e;
+}
+
+.navbar .container a, .navbar .container .navbar-collapse ul li a{
+  color: #d4f1f4;
+  font-weight: bold;
+}
+
+/* 
+.dz{
+  border: dashed !important;
+  border-color: #ccc !important;
+  border-radius: 10px !important;
+}
+
+.dz:hover{
+  background-color: aliceblue !important;
+} */
